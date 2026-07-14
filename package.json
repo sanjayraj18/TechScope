@@ -1,0 +1,8 @@
+{
+  "name": "techscope",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

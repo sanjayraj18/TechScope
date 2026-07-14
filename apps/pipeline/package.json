@@ -1,0 +1,10 @@
+{
+  "name": "@techscope/pipeline",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@techscope/detector",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@techscope/detector": "*"
+  }
+}
