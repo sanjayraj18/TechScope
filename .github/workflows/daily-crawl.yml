@@ -1,9 +1,9 @@
-name:daily-crawl
+name: daily-crawl
 
 on:
   schedule:
-    - cron : "30 3 * *"
-  
+    - cron: "30 3 * * *"
+
   workflow_dispatch:
 
 jobs:
@@ -32,4 +32,4 @@ jobs:
         run: npx tsx packages/db/src/load.ts crawl.jsonl detections.jsonl
 
       - name: Diff
-        run: npx tsx packages/db/src/differ.ts 
+        run: npx tsx packages/db/src/differ.ts
