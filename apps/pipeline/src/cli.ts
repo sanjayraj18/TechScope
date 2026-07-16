@@ -23,7 +23,11 @@ const counts: Record<string, number> = {};
 
 await runPool(domains, CONCURRENCY, fetchPage, (result, done, total) => {
   counts[result.status] = (counts[result.status] ?? 0) + 1;
-  out.write(JSON.stringify(result) + "\n");
+
+  const json = JSON.stringify(result).replace(/[\u2028\u2029]/g, (c) =>
+    c === "\u2028" ? "\\u2028" : "\\u2029",
+  );
+  out.write(json + "\n");
 
   if (done % 100 == 0 && done == total) {
     console.log(`${done}/${total}`, JSON.stringify(counts));

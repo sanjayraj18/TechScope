@@ -27,7 +27,7 @@ export async function fetchPage(domain: string) {
   });
 
   try {
-    const res = await fetch(`https://{domain}`, {
+    const res = await fetch(`https://${domain}`, {
       redirect: "follow",
       signal: AbortSignal.timeout(TIMEOUT_MS),
       headers: { "user-agent": USER_AGENT, accept: "text/html" },
